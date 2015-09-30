@@ -43,4 +43,17 @@ public class PointTest {
         assertEquals(2, pt.getY());
     }
 
+    @Test
+    public void testInvertirCoordenadas(){
+    	this.pt.invertirCoordenadas();
+        assertEquals(3, pt.getX());
+        assertEquals(2, pt.getY());    	
+    }    
+    
+    @Test
+    public void testPuntoMedio(){
+    	this.pt.puntoMedio();
+        assertEquals(1, pt.getX(), 10e-5);
+        assertEquals(1.5, pt.getY(), 10e-5);    	
+    }
 }
