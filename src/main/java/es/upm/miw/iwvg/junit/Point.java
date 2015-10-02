@@ -2,14 +2,14 @@ package es.upm.miw.iwvg.junit;
 
 public class Point {
     
-    private int x, y;
+    private double x, y;
 
-    public Point(int x, int y) {
+    public Point(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
-    public Point(int xy) {
+    public Point(double xy) {
         this(xy, xy);
     }
 
@@ -30,14 +30,19 @@ public class Point {
         this.y -= origin.getY();
     }
     
-    public int getX() {
+    public double getX() {
         return this.x;
     }
 
-    public int getY() {
+    public double getY() {
         return this.y;
     }
-
+    
+    public void puntoMedio(){
+        this.x = this.x/2;
+        this.y = this.y/2;       
+    }
+    
     @Override
     public String toString() {
         return "Point[" + x + "," + y + "]";

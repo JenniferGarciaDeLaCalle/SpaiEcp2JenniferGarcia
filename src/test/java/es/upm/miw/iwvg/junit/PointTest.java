@@ -15,15 +15,15 @@ public class PointTest {
 
     @Test
     public void testPuntoIntInt() {
-        assertEquals(2, pt.getX());
-        assertEquals(3, pt.getY());
+        assertEquals(2, pt.getX(),10e-5);
+        assertEquals(3, pt.getY(),10e-5);
     }
 
     @Test
     public void testPunto() {
         pt = new Point();
-        assertEquals(0, pt.getX());
-        assertEquals(0, pt.getY());
+        assertEquals(0, pt.getX(),10e-5);
+        assertEquals(0, pt.getY(),10e-5);
     }
 
     @Test
@@ -39,15 +39,15 @@ public class PointTest {
     @Test
     public void testTranslate() {
         this.pt.translateOrigin(new Point(1, 1));
-        assertEquals(1, pt.getX());
-        assertEquals(2, pt.getY());
+        assertEquals(1, pt.getX(), 10e-5);
+        assertEquals(2, pt.getY(), 10e-5);
     }
 
     @Test
     public void testInvertirCoordenadas(){
     	this.pt.invertirCoordenadas();
-        assertEquals(3, pt.getX());
-        assertEquals(2, pt.getY());    	
+        assertEquals(3, pt.getX(), 10e-5);
+        assertEquals(2, pt.getY(), 10e-5);    	
     }    
     
     @Test
