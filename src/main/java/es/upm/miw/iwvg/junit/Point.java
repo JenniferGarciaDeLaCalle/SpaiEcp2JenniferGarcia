@@ -42,6 +42,12 @@ public class Point {
         this.x = this.x/2;
         this.y = this.y/2;       
     }
+ 
+    public void invertirCoordenadas(){
+    	double aux = this.x;
+    	this.x = this.y;
+    	this.y = aux;    	
+    }
     
     @Override
     public String toString() {
