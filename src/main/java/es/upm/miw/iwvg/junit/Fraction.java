@@ -44,6 +44,13 @@ public class Fraction {
         this.numerator = numerator;
         this.denominator = denominator;
     }
+    
+    public void fraccionMayor(Fraction f){
+        if ((this.numerator/this.denominator) < (f.getNumerator()/f.getDenominator())) {
+            this.numerator = f.getNumerator();
+            this.denominator = f.getDenominator();
+        } 
+    }
 
     public Fraction() {
         this(1, 1);
@@ -58,7 +65,7 @@ public class Fraction {
     }
 
     public int getDenominator() {
-        return denominator;
+        return denominator;        
     }
     
 }
