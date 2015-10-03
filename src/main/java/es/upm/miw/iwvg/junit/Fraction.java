@@ -51,6 +51,10 @@ public class Fraction {
             this.denominator = f.getDenominator();
         } 
     }
+    
+    public void mitadFraccion() {
+        this.numerator = this.numerator / 2;
+    }
 
     public Fraction() {
         this(1, 1);
