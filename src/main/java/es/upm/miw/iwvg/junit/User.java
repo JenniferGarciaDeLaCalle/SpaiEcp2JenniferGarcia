@@ -12,7 +12,7 @@ public class User {
 
     public User(int number, String name, String familyName) {
         this.number = number;
-        this.name = this.format(name);
+        this.name = this.formatName(name);
         this.familyName = this.format(familyName);
     }
     
@@ -24,6 +24,16 @@ public class User {
     private String format(String string) {
         string = string.trim();
         return string.substring(0, 1).toUpperCase() + string.substring(1).toLowerCase();
+    }
+    
+    private String formatName(String string) {
+        String[] words = string.split(" ");
+        String name = "";
+        for (String word : words) {
+            name += word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase() + " ";
+        }
+        name = name.trim();
+        return name;
     }
 
     public String fullName() {
@@ -45,7 +55,7 @@ public class User {
     public String getFamilyName() {
         return this.familyName;
     }
-    
+
     public String getSecondFamilyName() {
         return this.secondFamilyName;
     }
