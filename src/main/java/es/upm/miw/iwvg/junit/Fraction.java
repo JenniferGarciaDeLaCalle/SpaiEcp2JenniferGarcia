@@ -72,4 +72,9 @@ public class Fraction {
         return denominator;        
     }
     
+    public void multiplicarFraccion(Fraction f) {
+        this.numerator = this.numerator*f.numerator;
+        this.denominator = this.denominator* f.denominator;
+    }
+    
 }
