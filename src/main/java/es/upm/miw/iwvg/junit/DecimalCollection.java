@@ -36,5 +36,22 @@ public class DecimalCollection {
         }
         return higher;
     }
+    public double decimalMenor(){
+        double lower = Double.POSITIVE_INFINITY;
+        for (double item : this.collection) {
+            if (item < lower) {
+                lower = item;
+            }
+        }
+        return lower;
+    }    
+
+    public double mediaLista(){
+        double suma = 0;
+        for (double item : this.collection) {
+            suma += item;
+        }
+        return suma / this.size();
+    }
 
 }
