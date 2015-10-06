@@ -40,6 +40,8 @@ public class FractionTest {
     public void testMitadFraccion(){
     	fact.mitadFraccion();
     	assertEquals((double) (10/2)/2, fact.decimal(), 10e-5);
+    	fact.mitadFraccion();
+    	assertEquals((double) (5.0/2)/2, fact.decimal(), 10e-5);
     }
     
     @Test

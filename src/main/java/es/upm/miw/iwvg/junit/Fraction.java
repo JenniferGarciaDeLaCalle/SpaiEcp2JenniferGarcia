@@ -53,7 +53,7 @@ public class Fraction {
     }
     
     public void mitadFraccion() {
-        this.numerator = this.numerator / 2;
+        this.denominator *= 2;
     }
 
     public Fraction() {
